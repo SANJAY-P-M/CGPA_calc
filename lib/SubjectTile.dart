@@ -16,7 +16,7 @@ class SubjectTile extends StatelessWidget {
       trailing: DropdownMenu(
         controller: _controller,
         menuStyle: const MenuStyle(
-          backgroundColor: MaterialStatePropertyAll(Colors.white70),
+          backgroundColor: MaterialStatePropertyAll(Colors.white),
         ),
         dropdownMenuEntries: Subject.grades
             .map((e) => DropdownMenuEntry(

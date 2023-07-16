@@ -43,15 +43,11 @@ class GetGrade extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-                Column(
-                  children: listOfSubjectTile(),
-                ),
+                Column(children: listOfSubjectTile()),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(
-                      context,
-                      "result",
-                    );
+                    Navigator.pushNamed(context, "result",
+                        arguments: Subject.calculateCgpa(subjectsObj));
                   },
                   style: ButtonStyle(
                       backgroundColor:

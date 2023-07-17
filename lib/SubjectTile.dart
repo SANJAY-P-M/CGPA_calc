@@ -4,7 +4,6 @@ import 'package:cgpa_calc/Subject.dart';
 class SubjectTile extends StatelessWidget {
   final Subject subject;
   SubjectTile({super.key, required this.subject});
-  final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -14,11 +13,10 @@ class SubjectTile extends StatelessWidget {
         style: const TextStyle(fontFamily: "Tektur"),
       ),
       trailing: DropdownMenu(
-        controller: _controller,
         menuStyle: const MenuStyle(
           backgroundColor: MaterialStatePropertyAll(Colors.white),
         ),
-        dropdownMenuEntries: Subject.grades
+        dropdownMenuEntries: subject.grades
             .map((e) => DropdownMenuEntry(
                   value: e.toString(),
                   label: e.toString(),

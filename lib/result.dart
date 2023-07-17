@@ -12,108 +12,124 @@ class Result extends StatelessWidget {
         title: const Text("Result"),
         backgroundColor: Colors.green[400],
       ),
-      body: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        Container(
-          margin: EdgeInsets.only(top: 10),
-          child: Column(
-            children: [
-              CircleAvatar(
-                radius: 40,
-                foregroundImage: AssetImage("images/sanjay.jpg"),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Column(children: [
+            Text(
+              "Congrats your cgpa is ${cgpa.toStringAsFixed(2)} ",
+              style: const TextStyle(
+                fontSize: 22,
+                fontFamily: "HandWritten",
+                fontWeight: FontWeight.w400,
               ),
-              SizedBox(
-                height: 10,
+            ),
+            const SizedBox(
+              height: 32,
+            ),
+            CircularPercentIndicator(
+              onAnimationEnd: () {},
+              radius: 120.0,
+              lineWidth: 30.0,
+              percent: (cgpa! / 10),
+              center: Text(
+                cgpa.toStringAsFixed(2),
+                style: const TextStyle(
+                    fontSize: 21,
+                    fontFamily: "Tektur",
+                    fontWeight: FontWeight.bold),
               ),
-              Text(
-                "SANJAY P M",
-                style: TextStyle(
-                  fontSize: 26,
-                  fontFamily: "HandWritten",
-                  color: Colors.black,
+              progressColor: Colors.green,
+              animation: true,
+              animationDuration: 1200,
+            ),
+          ]),
+          const SizedBox(
+            width: 200,
+            child: Divider(
+              height: 5,
+              thickness: 3,
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(right: 150),
+                  child: const Text(
+                    "Developed By : ",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontFamily: "Mono",
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-              ),
-              Text(
-                "FLUTTER DEVELOPER",
-                style: TextStyle(
-                    fontSize: 14,
-                    fontFamily: "Mono",
-                    color: Colors.black,
-                    letterSpacing: 1),
-              ),
-              SizedBox(
-                width: 150,
-                child: Divider(
+                const SizedBox(
+                  height: 25,
+                ),
+                const CircleAvatar(
+                  radius: 40,
+                  foregroundImage: AssetImage("images/sanjay.jpg"),
+                ),
+                const SizedBox(
                   height: 10,
-                  thickness: 2,
                 ),
-              ),
-              Card(
-                margin: EdgeInsets.symmetric(vertical: 7, horizontal: 30),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.call,
-                    color: Colors.green[500],
+                const Text(
+                  "SANJAY P M",
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontFamily: "HandWritten",
+                    color: Colors.black,
                   ),
-                  title: Text(
-                    "+91 93633 97249",
-                    style: TextStyle(
-                      fontFamily: "Mono",
-                      fontSize: 20,
+                ),
+                const SizedBox(
+                  width: 150,
+                  child: Divider(
+                    height: 10,
+                    thickness: 2,
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 7, horizontal: 20),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.call,
+                      color: Colors.green[500],
+                    ),
+                    title: Text(
+                      "+91 93633 97249",
+                      style: TextStyle(
+                        fontFamily: "Mono",
+                        fontSize: 20,
+                      ),
+                    ),
+                    dense: true,
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 7, horizontal: 20),
+                  child: ListTile(
+                    dense: true,
+                    leading: Icon(
+                      Icons.mail,
+                      color: Colors.green[500],
+                    ),
+                    title: Text(
+                      "pmsanjay2003@gmail.com",
+                      style: TextStyle(
+                        fontFamily: "Mono",
+                        fontSize: 18,
+                      ),
                     ),
                   ),
-                  dense: true,
                 ),
-              ),
-              Card(
-                margin: EdgeInsets.symmetric(vertical: 7, horizontal: 30),
-                child: ListTile(
-                  dense: true,
-                  leading: Icon(
-                    Icons.mail,
-                    color: Colors.green[500],
-                  ),
-                  title: Text(
-                    "pmsanjay2003@gmail.com",
-                    style: TextStyle(
-                      fontFamily: "Mono",
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        CircularPercentIndicator(
-          radius: 120.0,
-          lineWidth: 30.0,
-          percent: (cgpa! / 10),
-          center: Text(
-            cgpa.toString().substring(0, 4),
-            style: TextStyle(
-                fontSize: 21,
-                fontFamily: "Tektur",
-                fontWeight: FontWeight.bold),
-          ),
-          progressColor: Colors.green,
-          animation: true,
-          animationDuration: 2000,
-        ),
-        SizedBox(
-          height: 32,
-        ),
-        Text(
-          "Congrats your cgpa is ${cgpa.toString().substring(0, 4)} ",
-          style: TextStyle(
-            fontSize: 22,
-            fontFamily: "HandWritten",
-            fontWeight: FontWeight.w400,
-          ),
-        )
-      ]),
+        ],
+      ),
     );
   }
 }

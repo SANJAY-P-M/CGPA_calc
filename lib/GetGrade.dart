@@ -8,15 +8,39 @@ class GetGrade extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Subject> subjectsObj = [
-      Subject(subject: "Engineering Exploration - 4", credit: 2),
-      Subject(subject: "Design and Analysis of Algorithm", credit: 3),
-      Subject(subject: "Probability,Statics and Queuing theory", credit: 4),
-      Subject(subject: "Career Enhancement Program", credit: 1),
-      Subject(subject: "Computer Networks", credit: 4),
-      Subject(subject: "Advanced JAVA Programming", credit: 4),
-      Subject(subject: "Internet Programming", credit: 4),
-      Subject(subject: "Advanced Database", credit: 4),
-      Subject(subject: "Design and Analysis of Algorithm Laboratary", credit: 2)
+      Subject(
+        subject: "Engineering Exploration - 4",
+        credit: 1,
+      ),
+      Subject(
+        subject: "Design and Analysis of Algorithm",
+        credit: 3,
+      ),
+      Subject(
+        subject: "Probability,Statics and Queuing theory",
+        credit: 4,
+      ),
+      Subject(
+        subject: "Career Enhancement Program",
+        credit: 1,
+      ),
+      Subject(
+        subject: "Computer Networks",
+        credit: 4,
+      ),
+      Subject(
+        subject: "Advanced JAVA Programming",
+        credit: 4,
+      ),
+      Subject(
+        subject: "Internet Programming",
+        credit: 4,
+      ),
+      Subject(
+        subject: "Advanced Database",
+        credit: 4,
+      ),
+      Subject(subject: "Design and Analysis of Algorithm Laboratory", credit: 1)
     ];
     listOfSubjectTile() {
       List<Widget> subjectsTile = List.of(
@@ -53,7 +77,7 @@ class GetGrade extends StatelessWidget {
                       backgroundColor:
                           MaterialStatePropertyAll(Colors.orange[600])),
                   child: const Text(
-                    "CALAULATE",
+                    "CALCULATE",
                     style: TextStyle(
                       fontSize: 16,
                     ),

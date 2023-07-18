@@ -1,7 +1,7 @@
 class Subject {
   String subject;
   double credit;
-  static final List<String> grades = ["O", "A+", "A", "B+", "B", "C", "U"];
+  List<String> grades = ["O", "A+", "A", "B+", "B", "C", "U"];
   Subject({required this.subject, required this.credit});
   late String grade;
   setGrade(grade) {

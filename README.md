@@ -1,3 +1,4 @@
+https://github.com/SANJAY-P-M/CGPA_calc/assets/106712995/8f0cde9e-b96c-47cf-ba21-f8d2ccb42120
   # CGPA Calculator
 
 This Flutter project is a CGPA calculator designed to help students calculate their Cumulative Grade Point Average (CGPA) for the recent semester results. It provides an intuitive interface to input course details and their corresponding grades to obtain the overall CGPA.
